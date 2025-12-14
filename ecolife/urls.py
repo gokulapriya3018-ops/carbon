@@ -1,6 +1,15 @@
+
+
+
+
 from django.contrib import admin
-from django.urls import include, path
-from accounts import views
+from django.urls import path, include
+from django.http import HttpResponse
+
+from ecolife.electricity import views
+
+def home(request):
+    return HttpResponse("EcoLife Project Deployed Successfully ✅")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -16,4 +25,3 @@ urlpatterns = [
     
 
 ]
-
